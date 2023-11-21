@@ -36,3 +36,4 @@ values:
   vars:
     PORT: "80"
     SERVICEDIR: services
+    SERVICES: "api, products"

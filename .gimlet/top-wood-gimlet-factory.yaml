@@ -1,0 +1,19 @@
+app: gimlet-factory
+env: top-wood
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.60.0
+values:
+  containerPort: 80
+  gitRepository: iujlaki/gimlet-factory
+  gitSha: '{{ .SHA }}'
+  image:
+    repository: 127.0.0.1:32447/gimlet-factory
+    tag: '{{ .SHA }}'
+  replicas: 1
+  resources:
+    ignoreLimits: true
+  vars:
+    PORT: "80"

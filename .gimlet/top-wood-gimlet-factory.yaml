@@ -23,7 +23,7 @@ values:
       timeoutSeconds: 3
   probe:
     enabled: true
-    path: /list-aliases1
+    path: /list-aliases
     settings:
       failureThreshold: 3
       initialDelaySeconds: 0

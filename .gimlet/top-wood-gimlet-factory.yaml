@@ -12,6 +12,24 @@ values:
   image:
     repository: 127.0.0.1:32447/gimlet-factory
     tag: '{{ .SHA }}'
+  livenessProbe:
+    enabled: false
+    path: /
+    settings:
+      failureThreshold: 3
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+  probe:
+    enabled: true
+    path: /list-aliases1
+    settings:
+      failureThreshold: 3
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
   replicas: 1
   resources:
     ignoreLimits: true

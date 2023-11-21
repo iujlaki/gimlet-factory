@@ -17,3 +17,4 @@ values:
     ignoreLimits: true
   vars:
     PORT: "80"
+    SERVICEDIR: services

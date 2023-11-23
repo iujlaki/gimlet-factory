@@ -48,6 +48,7 @@ values:
       cpu: 200m
       memory: 200Mi
   vars:
+    METRICS_PORT: "8080"
     PORT: "80"
     SERVICEDIR: services
     SERVICES: api, products

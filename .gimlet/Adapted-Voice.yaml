@@ -37,9 +37,16 @@ values:
       periodSeconds: 10
       successThreshold: 1
       timeoutSeconds: 3
-  replicas: 1
+  replicas: 16
   resources:
+    ignore: false
     ignoreLimits: true
+    limits:
+      cpu: 200m
+      memory: 200Mi
+    requests:
+      cpu: 200m
+      memory: 200Mi
   vars:
     PORT: "80"
     SERVICEDIR: services

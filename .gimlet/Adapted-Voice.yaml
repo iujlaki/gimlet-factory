@@ -1,5 +1,5 @@
 app: gimlet-factory
-env: top-wood
+env: adapted-voice
 namespace: default
 chart:
   repository: https://chart.onechart.dev

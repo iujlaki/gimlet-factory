@@ -28,6 +28,11 @@ values:
       periodSeconds: 10
       successThreshold: 1
       timeoutSeconds: 3
+  podAnnotations:
+    prometheus.io/port: "8080"
+    prometheus.io/scrape: "true"
+  podDisruptionBudgetEnabled: true
+  podLabels: {}
   probe:
     enabled: true
     path: /api/api/list-aliases
@@ -47,6 +52,7 @@ values:
     requests:
       cpu: 200m
       memory: 200Mi
+  spreadAcrossNodes: true
   vars:
     METRICS_PORT: "8080"
     PORT: "80"

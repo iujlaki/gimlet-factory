@@ -12,6 +12,13 @@ values:
   image:
     repository: 127.0.0.1:32447/gimlet-factory
     tag: '{{ .SHA }}'
+  ingress:
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt
+      kubernetes.io/ingress.class: nginx
+    host: gimlet-factory.turbopizza.net
+    path: /
+    tlsEnabled: true
   livenessProbe:
     enabled: false
     path: /
@@ -36,4 +43,4 @@ values:
   vars:
     PORT: "80"
     SERVICEDIR: services
-    SERVICES: "api, products"
+    SERVICES: api, products
